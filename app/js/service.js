@@ -18,6 +18,16 @@ $(document).ready(function () {
     service.base_url = 'http://localhost:3000';
   }
 
+  service.regions = [];
+  service.updateRegions = function(region){
+    if ($.inArray(region, service.regions) == -1){
+      service.regions.push(region);
+    }
+    else{
+      service.regions.splice(service.regions.indexOf(region), 1);
+    }
+  }
+
   service.submit = function(){
     var name = $("#q1").val();
     var email = $("#q2").val();
