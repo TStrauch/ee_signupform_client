@@ -70,7 +70,9 @@
 		// show [current field]/[total fields] status
 		ctrlNavPosition : true,
 		// reached the review and submit step
-		onReview : function() { return false; }
+		onReview : function() {
+			return false;
+		}
 	};
 
 	/**
@@ -296,6 +298,7 @@
 					classie.add( self.formEl, 'fs-show' );
 					// callback
 					self.options.onReview();
+					$(window).trigger('resize');
 				}
 				else {
 					classie.remove( nextField, 'fs-show' );

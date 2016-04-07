@@ -13,9 +13,8 @@
 $(document).ready(function () {
   service = {};
   service.base_url = '';
-  console.log(location.hostname);
   if(location.hostname === 'localhost'){
-    service.base_url = 'http://localhost:3000';
+    service.base_url = 'http://localhost';
   }
 
   service.regions = [];
@@ -37,8 +36,11 @@ $(document).ready(function () {
     }
     console.log(data);
 
-    $.post(service.base_url+'/api/signup', data, function(data) {
-     console.log('done.');
+    // $.post(service.base_url+'/api/signup', data, function(data) {
+    //  console.log('done.');
+    // });
+    $.post(service.base_url+'/Projekte/ee_signupform/signup.php', data, function(data) {
+     console.log(data);
     });
   };
 

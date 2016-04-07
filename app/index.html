@@ -17,8 +17,9 @@
 		<link rel="stylesheet" type="text/css" href="css/cs-select.css" />
 		<link rel="stylesheet" type="text/css" href="css/cs-skin-boxes.css" />
 		<link rel="stylesheet" type="text/css" href="css/jqvmap.css" />
+		<link rel="stylesheet" type="text/css" href="css/jqcloud.css" />
 
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
     <!-- endbuild -->
 
 	</head>
@@ -27,7 +28,7 @@
 
 			<div class="fs-form-wrap" id="fs-form-wrap">
 				<div class="fs-title">
-					<h1>Signup as Member</h1>
+					<h1>Hi!</h1>
 					<div class="codrops-top">
 						<!-- <a class="codrops-icon codrops-icon-prev" href="http://tympanus.net/Development/NotificationStyles/"><span>Previous Demo</span></a>
 						<a class="codrops-icon codrops-icon-drop" href="http://tympanus.net/codrops/?p=19520"><span>Back to the Codrops Article</span></a> -->
@@ -36,13 +37,13 @@
 				</div>
 				<form id="myform" class="fs-form fs-form-full" action="javascript:void(0);" autocomplete="off">
 					<ol class="fs-fields">
-						<!-- <li>
-							<label class="fs-field-label fs-anim-upper" for="q0">Upload CV</label>
-							<input class="fs-anim-lower" style="font-size:1em; padding-top:20px;" id="q0" name="q0" type="file" required />
-						</li> -->
 						<li>
-							<label class="fs-field-label fs-anim-upper" for="q0">Which countries have you been to?</label>
-							<div class="fs-anim-lower" id="vmap" style="width: 100%; height: 350px;"></div>
+							<label class="fs-field-label fs-anim-upper" for="q0">Select some skills & passions</label>
+							<div class="fs-anim-lower" id="wordcloud" style="width: 100%; height: 350px;"></div>
+						</li>
+						<li>
+							<label class="fs-field-label fs-anim-upper" for="q0">Upload CV</label>
+							<input class="fs-anim-lower fileUpload" style="font-size:1em; padding-top:20px;" id="q0" name="q0" type="file" required />
 						</li>
 						<li>
 							<label class="fs-field-label fs-anim-upper" for="q1">What's your name?</label>
@@ -51,6 +52,10 @@
 						<li>
 							<label class="fs-field-label fs-anim-upper" for="q2" data-info="We won't send you spam, we promise...">What's your email address?</label>
 							<input class="fs-anim-lower" id="q2" name="q2" type="email" placeholder="dean@road.us" required/>
+						</li>
+						<li>
+							<label class="fs-field-label fs-anim-upper" for="q0">Which countries have you been to?</label>
+							<div class="fs-anim-lower" id="vmap" style="width: 100%; height: 350px;"></div>
 						</li>
 						<li data-input-trigger>
 							<label class="fs-field-label fs-anim-upper" for="q3" data-info="This will help us know what kind of service you need">What's your priority for your new website?</label>
@@ -96,7 +101,6 @@
 						</li> -->
 					</ol><!-- /fs-fields -->
 					<button class="fs-submit" type="submit" onclick="service.submit()">Send answers</button>
-					<button class="fs-submit" type="submit" onclick="service.submit()">Send answers</button>
 					<!-- <button >Send answers</button> -->
 				</form><!-- /fs-form -->
 			</div><!-- /fs-form-wrap -->
@@ -110,6 +114,8 @@
 		<script src="js/jquery.vmap.min.js"></script>
 		<script src="js/jquery.vmap.world.js"></script>
 		<script src="js/jquery.vmap.sampledata.js"></script>
+
+		<script src="js/jqcloud-1.0.4.js"></script>
 
 		<script src="js/modernizr3.custom.js"></script>
 		<script src="js/classie.js"></script>
@@ -151,7 +157,7 @@
           color: '#ffffff',
           hoverOpacity: 0.7,
           selectedColor: '#666666',
-          enableZoom: true,
+          // enableZoom: true,
           showTooltip: true,
           scaleColors: ['#C8EEFF', '#006491'],
           normalizeFunction: 'polynomial',
@@ -163,6 +169,46 @@
 			    }
 
         });
+
+				var word_array = [
+          {text: "Lorem", weight: 15, html:{style: "cursor: pointer;"}, handlers: {click: function() { alert("it works!"); } }},
+          {text: "Ipsum", weight: 9, link: "http://jquery.com/"},
+          {text: "Dolor", weight: 6, html: {title: "I can haz any html attribute"}},
+          {text: "Sit", weight: 7},
+          {text: "Amet", weight: 5},
+          {text: "Lorem", weight: 15, html:{style: "cursor: pointer;"}, handlers: {click: function() { alert("it works!"); } }},
+          {text: "Ipsum", weight: 9, link: "http://jquery.com/"},
+          {text: "Dolor", weight: 6, html: {title: "I can haz any html attribute"}},
+          {text: "Sit", weight: 7},
+          {text: "Amet", weight: 5},
+          {text: "Lorem", weight: 15, html:{style: "cursor: pointer;"}, handlers: {click: function() { alert("it works!"); } }},
+          {text: "Ipsum", weight: 9, link: "http://jquery.com/"},
+          {text: "Dolor", weight: 6, html: {title: "I can haz any html attribute"}},
+          {text: "Sit", weight: 7},
+          {text: "Amet", weight: 5},
+          {text: "Lorem", weight: 15, html:{style: "cursor: pointer;"}, handlers: {click: function() { alert("it works!"); } }},
+          {text: "Ipsum", weight: 9, link: "http://jquery.com/"},
+          {text: "Dolor", weight: 6, html: {title: "I can haz any html attribute"}},
+          {text: "Sit", weight: 7},
+          {text: "Amet", weight: 5},
+          {text: "Lorem", weight: 15, html:{style: "cursor: pointer;"}, handlers: {click: function() { alert("it works!"); } }},
+          {text: "Ipsum", weight: 9, link: "http://jquery.com/"},
+          {text: "Dolor", weight: 6, html: {title: "I can haz any html attribute"}},
+          {text: "Sit", weight: 7},
+          {text: "Amet", weight: 5},
+          {text: "Lorem", weight: 15, html:{style: "cursor: pointer;"}, handlers: {click: function() { alert("it works!"); } }},
+          {text: "Ipsum", weight: 9, link: "http://jquery.com/"},
+          {text: "Dolor", weight: 6, html: {title: "I can haz any html attribute"}},
+          {text: "Sit", weight: 7},
+          {text: "Amet", weight: 5},
+          {text: "Lorem", weight: 15, html:{style: "cursor: pointer;"}, handlers: {click: function() { alert("it works!"); } }},
+          {text: "Ipsum", weight: 9, link: "http://jquery.com/"},
+          {text: "Dolor", weight: 6, html: {title: "I can haz any html attribute"}},
+          {text: "Sit", weight: 7},
+          {text: "Amet", weight: 5}
+          // ...as many words as you want
+	      ];
+				$("#wordcloud").jQCloud(word_array);
       });
 
     </script>
