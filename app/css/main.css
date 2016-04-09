@@ -4,8 +4,13 @@ input.upload {
     display: none;
 }
 
-.fs-fields span{
-  font-size: 0.5em;
+.fs-form-full .fs-fields span{
+  font-size: 0.6em;
+  display: inline-block;
+  float:none;
+}
+.fs-form-overview .fs-fields span{
+  font-size: 0.8em;
   display: inline-block;
   float:none;
 }
@@ -16,5 +21,42 @@ input.upload {
 
 .fs-fields .group input{
   margin-bottom:20px;
-  font-size:1em;
+  font-size:1.0em;
+}
+
+div.jqcloud span.w10:hover{
+  color: #a66;
+}
+
+div.jqcloud span.w10.selected{
+  color: #a00;
+}
+
+.fs-form-full .fs-fields button{
+  padding: 0.6em 1.5em;
+  border: 3px solid #fffed8;
+  border-radius: 40px;
+  font-weight: 400;
+  background: transparent;
+  color: #fff;
+  font-size:0.5em;
+  transition 0.2s background;
+  transition 0.2s color;
+}
+
+.fs-form-full .fs-fields button:hover{
+  background: #fffed8;
+  color: #222;
+}
+
+.fs-form-overview .fs-fields button{
+  padding: 0.6em 1.5em;
+  border: 3px solid #222;
+  border-radius: 40px;
+  font-weight: 400;
+  background: #222;
+  color: #fff;
+  font-size:0.8em;
+  transition 0.2s background;
+  transition 0.2s color;
 }

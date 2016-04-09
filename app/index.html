@@ -25,7 +25,6 @@
 	</head>
 	<body>
 		<div class="container">
-
 			<div class="fs-form-wrap" id="fs-form-wrap">
 				<div class="fs-title">
 					<h1>Hi!</h1>
@@ -38,38 +37,49 @@
 				<form id="myform" class="fs-form fs-form-full" action="javascript:void(0);" autocomplete="off">
 					<ol class="fs-fields">
 						<li>
-							<label class="fs-field-label fs-anim-upper" for="q1">Any online presence you want to share?</label>
-							<div class="group fs-anim-lower"><span>Website:</span><input id="q1" name="q1" type="url" placeholder="http://deanmoriarty.com"/></group>
-							<div class="group fs-anim-lower"><span>LinkedIn:</span><input id="q1" name="q1" type="url" placeholder="http://uk.linkedin.com/in/deanmoriarty"/></group>
-							<div class="group fs-anim-lower"><span>XING:</span><input id="q1" name="q1" type="url" placeholder="http://www.xing.com/profile/deanmoriarty"/></group>
+							<label class="fs-field-label fs-anim-upper" for="q1">Where can we find you online?</label>
+							<div class="group fs-anim-lower"><span>Website:</span><input id="i_online_website" name="i_online_website" type="url" placeholder="http://deanmoriarty.com"/></group>
+							<div class="group fs-anim-lower"><span>LinkedIn:</span><input id="i_online_linkedin" name="i_online_linkedin" type="url" placeholder="http://uk.linkedin.com/in/deanmoriarty"/></group>
+							<div class="group fs-anim-lower"><span>XING:</span><input id="i_online_xing" name="i_online_xing" type="url" placeholder="http://www.xing.com/profile/deanmoriarty"/></group>
 						</li>
 						<li>
-							<label class="fs-field-label fs-anim-upper" for="q0">Select some skills & passions</label>
-							<div class="fs-anim-lower" id="wordcloud" style="width: 100%; height: 350px;"></div>
+							<label class="fs-field-label fs-anim-upper">Select some skills & passions</label>
+							<div class="fs-anim-lower" id="wordcloud" style="width: 90%;"></div>
 						</li>
 						<li>
-							<label class="fs-field-label fs-anim-upper" for="q0">Upload CV</label>
-							<input class="fs-anim-lower fileUpload" style="font-size:1em; padding-top:20px;" id="q0" name="q0" type="file" />
+							<label class="fs-field-label fs-anim-upper" for="i_uploadcv">Upload CV</label>
+							<!-- <input class="fs-anim-lower fileUpload" style="font-size:1em; padding-top:20px;" id="i_uploadcv" name="i_uploadcv" type="file" /> -->
+							<!-- <a href="https://www.dropbox.com/request/5XOSMsJkQpfz2QTd50mt" target="_blank">Upload</a> -->
+							<button class="fs-anim-lower" onclick="window.open('https://www.dropbox.com/request/gqHtBLQuXsZ8QKdYIcx6')">Upload</button>
 						</li>
 						<li>
-							<label class="fs-field-label fs-anim-upper" for="q1">What's your name?</label>
-							<input class="fs-anim-lower" id="q1" name="q1" type="text" placeholder="Dean Moriarty"/>
+							<label class="fs-field-label fs-anim-upper" for="i_name">What's your name?</label>
+							<input class="fs-anim-lower" id="i_name" name="i_name" type="text" placeholder="Dean Moriarty"/>
 						</li>
 						<li>
-							<label class="fs-field-label fs-anim-upper" for="q2" data-info="We won't send you spam, we promise...">What's your email address?</label>
-							<input class="fs-anim-lower" id="q2" name="q2" type="email" placeholder="dean@road.us"/>
+							<label class="fs-field-label fs-anim-upper" for="i_mail" data-info="We won't send you spam, we promise...">What's your email address?</label>
+							<input class="fs-anim-lower" id="i_mail" name="i_mail" type="email" placeholder="dean@road.us"/>
 						</li>
 
 						<li>
-							<label class="fs-field-label fs-anim-upper" for="q0">Which countries have you been to?</label>
+							<label class="fs-field-label fs-anim-upper" for="vmap">Which countries have you been to?</label>
 							<div class="fs-anim-lower" id="vmap" style="width: 100%; height: 350px;"></div>
 						</li>
-						<li data-input-trigger>
-							<label class="fs-field-label fs-anim-upper" for="q3" data-info="This will help us know what kind of service you need">What's your priority for your new website?</label>
-							<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
-								<span><input id="q3b" name="q3" type="radio" value="conversion"/><label for="q3b" class="radio-conversion">Sell things</label></span>
-								<span><input id="q3c" name="q3" type="radio" value="social"/><label for="q3c" class="radio-social">Become famous</label></span>
-								<span><input id="q3a" name="q3" type="radio" value="mobile"/><label for="q3a" class="radio-mobile">Mobile market</label></span>
+						<li>
+							<div id="i_wrapper_stuffilike">
+								<label class="fs-field-label fs-anim-upper" for="i_stuff" data-info="Choose the stuff that you find most awesome!">What's in your bag?</label>
+								<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
+									<span><input id="i_stuff1" name="i_stuff1" type="radio" value="conversion"/><label for="i_stuff1" class="radio-conversion">Sell things</label></span>
+									<span><input id="i_stuff2" name="i_stuff2" type="radio" value="dollar"/><label for="i_stuff2" class="radio-dollar">Become famous</label></span>
+									<span><input id="i_stuff3" name="i_stuff3" type="radio" value="mobile"/><label for="i_stuff3" class="radio-mobile">Mobile market</label></span>
+										<span><input id="i_stuff4" name="i_stuff4" type="radio" value="conversion"/><label for="i_stuff4" class="radio-conversion">Sell things</label></span>
+										<span><input id="i_stuff5" name="i_stuff5" type="radio" value="dollar"/><label for="i_stuff5" class="radio-dollar">Become famous</label></span>
+										<span><input id="i_stuff6" name="i_stuff6" type="radio" value="mobile"/><label for="i_stuff6" class="radio-mobile">Mobile market</label></span>
+											<span><input id="i_stuff7" name="i_stuff7" type="radio" value="conversion"/><label for="i_stuff7" class="radio-conversion">Sell things</label></span>
+											<span><input id="i_stuff8" name="i_stuff8" type="radio" value="dollar"/><label for="i_stuff8" class="radio-dollar">Become famous</label></span>
+											<span><input id="i_stuff9" name="i_stuff9" type="radio" value="mobile"/><label for="i_stuff9" class="radio-mobile">Mobile market</label></span>
+											<span><input id="i_stuff10" name="i_stuff10" type="radio" value="mobile"/><label for="i_stuff10" class="radio-mobile">Mobile market</label></span>
+								</div>
 							</div>
 						</li>
 						<!-- <li data-input-trigger>
@@ -118,6 +128,9 @@
 		<!-- bower:js -->
 		<script src="../bower_components/jquery/dist/jquery.js"></script>
 		<!-- endbower -->
+		<!-- extend jquery -->
+		<script>jQuery.fn.vals = function(){return this.map(function(){ return $(this).val(); });}</script>
+
 		<script src="js/jquery.vmap.min.js"></script>
 		<script src="js/jquery.vmap.world.js"></script>
 		<script src="js/jquery.vmap.sampledata.js"></script>
@@ -129,6 +142,8 @@
 		<script src="js/selectFx.js"></script>
 		<script src="js/fullscreenForm.js"></script>
 		<script src="js/service.js"></script>
+
+		<script src="js/customformelements-init.js"></script>
 		<!-- endbuild  -->
 
 
@@ -153,71 +168,5 @@
 			})();
 		</script>
 
-		<script type="text/javascript">
-
-      jQuery(document).ready(function () {
-				var regions = [];
-
-        jQuery('#vmap').vectorMap({
-          map: 'world_en',
-          backgroundColor: 'transparent',
-          color: '#ffffff',
-          hoverOpacity: 0.7,
-          selectedColor: '#666666',
-          // enableZoom: true,
-          showTooltip: true,
-          scaleColors: ['#C8EEFF', '#006491'],
-          normalizeFunction: 'polynomial',
-					values: sample_data,
-					multiSelectRegion: true,
-					selectedRegions: regions,
-					onRegionClick: function(element, code, region){
-			        service.updateRegions(region);
-			    }
-
-        });
-
-				var word_array = [
-          {text: "Lorem", weight: 15, html:{style: "cursor: pointer;"}, handlers: {click: function() { alert("it works!"); } }},
-          {text: "Ipsum", weight: 9, link: "http://jquery.com/"},
-          {text: "Dolor", weight: 6, html: {title: "I can haz any html attribute"}},
-          {text: "Sit", weight: 7},
-          {text: "Amet", weight: 5},
-          {text: "Lorem", weight: 15, html:{style: "cursor: pointer;"}, handlers: {click: function() { alert("it works!"); } }},
-          {text: "Ipsum", weight: 9, link: "http://jquery.com/"},
-          {text: "Dolor", weight: 6, html: {title: "I can haz any html attribute"}},
-          {text: "Sit", weight: 7},
-          {text: "Amet", weight: 5},
-          {text: "Lorem", weight: 15, html:{style: "cursor: pointer;"}, handlers: {click: function() { alert("it works!"); } }},
-          {text: "Ipsum", weight: 9, link: "http://jquery.com/"},
-          {text: "Dolor", weight: 6, html: {title: "I can haz any html attribute"}},
-          {text: "Sit", weight: 7},
-          {text: "Amet", weight: 5},
-          {text: "Lorem", weight: 15, html:{style: "cursor: pointer;"}, handlers: {click: function() { alert("it works!"); } }},
-          {text: "Ipsum", weight: 9, link: "http://jquery.com/"},
-          {text: "Dolor", weight: 6, html: {title: "I can haz any html attribute"}},
-          {text: "Sit", weight: 7},
-          {text: "Amet", weight: 5},
-          {text: "Lorem", weight: 15, html:{style: "cursor: pointer;"}, handlers: {click: function() { alert("it works!"); } }},
-          {text: "Ipsum", weight: 9, link: "http://jquery.com/"},
-          {text: "Dolor", weight: 6, html: {title: "I can haz any html attribute"}},
-          {text: "Sit", weight: 7},
-          {text: "Amet", weight: 5},
-          {text: "Lorem", weight: 15, html:{style: "cursor: pointer;"}, handlers: {click: function() { alert("it works!"); } }},
-          {text: "Ipsum", weight: 9, link: "http://jquery.com/"},
-          {text: "Dolor", weight: 6, html: {title: "I can haz any html attribute"}},
-          {text: "Sit", weight: 7},
-          {text: "Amet", weight: 5},
-          {text: "Lorem", weight: 15, html:{style: "cursor: pointer;"}, handlers: {click: function() { alert("it works!"); } }},
-          {text: "Ipsum", weight: 9, link: "http://jquery.com/"},
-          {text: "Dolor", weight: 6, html: {title: "I can haz any html attribute"}},
-          {text: "Sit", weight: 7},
-          {text: "Amet", weight: 5}
-          // ...as many words as you want
-	      ];
-				$("#wordcloud").jQCloud(word_array);
-      });
-
-    </script>
 	</body>
 </html>

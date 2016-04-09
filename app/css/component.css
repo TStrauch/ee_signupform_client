@@ -96,7 +96,7 @@
 
 /* Visibility control of elements */
 .fs-form-full .fs-fields > li,
-.fs-nav-dots, 
+.fs-nav-dots,
 .fs-progress,
 .fs-numbers,
 button.fs-continue,
@@ -296,7 +296,7 @@ button.fs-continue,
 	margin-right: 3%;
 	padding: 10px;
 	max-width: 200px;
-	width: 30%;
+	width: 15%;
 	text-align: center;
 	font-weight: 700;
 	font-size: 50%;
@@ -352,6 +352,10 @@ button.fs-continue,
 
 .fs-fields .fs-radio-custom label.radio-conversion::after {
 	background-image: url(../img/conversion.svg);
+}
+
+.fs-fields .fs-radio-custom label.radio-dollar::after {
+	background-image: url(../img/dollar.svg);
 }
 
 .fs-fields .fs-radio-custom label:hover::after,
