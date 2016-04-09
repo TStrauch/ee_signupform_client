@@ -1,6 +1,20 @@
 input.upload {
-    position: absolute !important;
     opacity: 0 !important;
     filter: alpha(opacity=0) !important;
     display: none;
+}
+
+.fs-fields span{
+  font-size: 0.5em;
+  display: inline-block;
+  float:none;
+}
+
+.fs-fields > li label.fs-field-label{
+  display: block;
+}
+
+.fs-fields .group input{
+  margin-bottom:20px;
+  font-size:1em;
 }
