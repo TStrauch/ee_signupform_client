@@ -1,9 +1,0 @@
-{
-  "name": "ee_signupForm",
-  "version": "0.0.1",
-  "appPath": "app",
-  "dependencies": {
-    "modernizr": "#3.0",
-    "jquery": "~2.2.2"
-  }
-}

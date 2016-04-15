@@ -26,3 +26,10 @@ https://nodesource.com/blog/dockerizing-your-nodejs-infrastructure/
 nodejs + postgres dockerize: https://nodesource.com/blog/dockerizing-your-nodejs-infrastructure/
 good digital ocean tutorial (might also be applicable in parts to AWS):https://www.digitalocean.com/community/tutorials/how-to-work-with-docker-data-volumes-on-ubuntu-14-04
 deutsche tutorial serie zu docker: https://www.ab-heute-programmieren.de/docker-teil-5-docker-compose-fuer-mehrere-container/
+blog continuous deployment with docker: http://learning-continuous-deployment.github.io/archive/
+from dev to prod : https://developer.rackspace.com/blog/dev-to-deploy-with-docker-machine-and-compose/
+section about persistent data containers:
+https://howchoo.com/g/y2y1mtkznda/getting-started-with-docker-compose-and-django
+
+save images of website to local server:
+http://www.compiletimeerror.com/2013/08/java-downloadextract-all-images-from.html#.VxDJaselfz8
